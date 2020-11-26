@@ -1,4 +1,4 @@
-from device_manager import HardwareDeviceManager
+from device_manager import DeviceManager
 from dummy_device import DummyBoard, DummySwitch
 from ipc import TCPEndpoint
 
@@ -9,7 +9,7 @@ TCP_ADDRESS = "/tmp/cdei.hardware.sock"
 
 
 def main(_args) -> int:
-    manager = HardwareDeviceManager()
+    manager = DeviceManager()
 
     manager.register_device("coherent_pwr", DummySwitch(COHERENT_PIN, "coherent_pwr"))
     manager.register_device("hercules_pwr", DummySwitch(COHERENT_PIN, "hercules_pwr"))

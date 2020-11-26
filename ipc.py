@@ -4,7 +4,8 @@ import socket
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
-from device_manager import DeviceEvent, DeviceManager
+from device import DeviceEvent
+from device_manager import DeviceManager
 from log import logger
 
 
@@ -74,7 +75,7 @@ class IPCEndpoint(ABC):
             logger.error("Invalid device ID: '%d'" % message.device_id)
             return Response(False, None)
 
-        logger.debug("Received %s to %s args: %s" % (message.event, target_device, message.args))
+        logger.debug("Received %s to '%s' args: %s" % (DeviceEvent(message.event), target_device, message.args))
         status, return_value = target_device.dispatch(message.event, message.args)
         return Response(status, return_value)
 
@@ -86,6 +87,7 @@ class IPCEndpoint(ABC):
 
 
 class TCPEndpoint(IPCEndpoint):
+    unix_endpoint: bool
     sock: socket.socket
 
     def __init__(self, address, manager: DeviceManager):
@@ -93,6 +95,7 @@ class TCPEndpoint(IPCEndpoint):
         self.address = address
 
         if isinstance(address, str):
+            self.unix_endpoint = True
             self.sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM, 0)
 
             try:
@@ -101,6 +104,7 @@ class TCPEndpoint(IPCEndpoint):
                 if os.path.exists(self.address):
                     raise
         else:
+            self.unix_endpoint = False
             self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0)
 
         self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
@@ -116,10 +120,13 @@ class TCPEndpoint(IPCEndpoint):
     def run(self):
         while True:
             client, address = self.sock.accept()
-            logger.debug("Connection from %s" % address)
+
+            if not self.unix_endpoint:
+                # Connections to unix sockets have no address
+                logger.debug("Connection from %s" % address)
 
             response = self.receive_ipc(self._read_message(client))
-            client.send(response.serialize())
+            client.sendall(response.serialize())
             client.close()
 
     def start(self):

@@ -1,70 +1,26 @@
-from abc import ABC, abstractmethod
-from enum import IntEnum, auto
-from typing import List, Callable, Dict, Optional, Tuple
+from typing import List, Dict, Optional
 
+from device import Device, DeviceEvent
 from log import logger
 
 
-class DeviceEvent(IntEnum):
-    HARDWARE_INIT = auto()
-    HARDWARE_CLEANUP = auto()
-    SWITCH_ON = auto()
-    SWITCH_OFF = auto()
-    GET_STATE = auto()
-
-
-class Device(ABC):
-    events: Dict[DeviceEvent, Callable[[object], object]]
-
-    def __init__(self):
-        self.events = {}
-
-        self.register_event(DeviceEvent.HARDWARE_INIT, self.hardware_init)
-        self.register_event(DeviceEvent.HARDWARE_CLEANUP, self.hardware_cleanup)
-
-    def register_event(self, event: DeviceEvent, callback: Callable[[object], object]):
-        self.events[event] = callback
-
-    @abstractmethod
-    def hardware_init(self): ...
-
-    @abstractmethod
-    def hardware_cleanup(self): ...
-
-    def dispatch(self, event: DeviceEvent, args) -> Tuple[bool, object]:
-        if event in self.events:
-            return True, self.events[event](args)
-
-        logger.error("Event %s is not handled by %s" % (event, self))
-        return False, None
-
-
-class DeviceManager(ABC):
-    @abstractmethod
-    def register_device(self, name: str, device: Device): ...
-
-    @abstractmethod
-    def get_device_id(self, device: Device) -> int: ...
-
-    @abstractmethod
-    def get_device_by_id(self, _id: int) -> Optional[Device]: ...
-
-    @abstractmethod
-    def get_device(self, name: str) -> Optional[Device]: ...
-
-
-class HardwareDeviceManager(DeviceManager):
+class DeviceManager(Device):
     name_to_devices: Dict[str, Device]
     device_to_id: Dict[Device, int]
     id_to_device: List[Device]
     id_counter: int
 
     def __init__(self):
+        super().__init__()
+
         self.name_to_devices = {}
         self.device_to_id = {}
         self.id_to_device = []
 
         self.id_counter = 0
+
+        self.register_event(DeviceEvent.METADATA, self.get_metadata)
+        self.register_device("self", self)
 
     def register_device(self, name: str, device: Device) -> int:
         """
@@ -121,3 +77,23 @@ class HardwareDeviceManager(DeviceManager):
             return None
 
         return self.name_to_devices[name]
+
+    def get_metadata(self, *_args):
+        devices_serial = []
+        for device in self.id_to_device[1:]:
+            if device.check_dispatch(DeviceEvent.METADATA):
+                devices_serial.append(device.dispatch(DeviceEvent.METADATA)[1])
+            else:
+                devices_serial.append(str(device))
+
+        return {
+            'name': 'self',
+            'devices': devices_serial,
+            'id_offset': 1
+        }
+
+    def hardware_init(self):
+        pass
+
+    def hardware_cleanup(self):
+        pass
