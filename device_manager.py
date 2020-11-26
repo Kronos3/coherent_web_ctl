@@ -17,6 +17,8 @@ class Device(ABC):
     events: Dict[DeviceEvent, Callable[[object], object]]
 
     def __init__(self):
+        self.events = {}
+
         self.register_event(DeviceEvent.HARDWARE_INIT, self.hardware_init)
         self.register_event(DeviceEvent.HARDWARE_CLEANUP, self.hardware_cleanup)
 
@@ -76,7 +78,7 @@ class HardwareDeviceManager(DeviceManager):
             logger.warning("Device with name '%s' is already registered as %s" % (name, self.name_to_devices[name]))
             return -1
 
-        if device == self.name_to_devices[name]:
+        if name in self.name_to_devices and device == self.name_to_devices[name]:
             logger.warning("Duplicated register of the same device %s: %s" % (name, device))
             return -1
 

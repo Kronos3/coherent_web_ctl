@@ -1,7 +1,8 @@
 import json
+import os
 import socket
 from abc import ABC, abstractmethod
-from typing import NamedTuple
+from dataclasses import dataclass
 
 from device_manager import DeviceEvent, DeviceManager
 from log import logger
@@ -16,7 +17,8 @@ class Communication(ABC):
     def parse(data: bytes) -> 'Communication': ...
 
 
-class Message(Communication, NamedTuple):
+@dataclass(frozen=True)
+class Message(Communication):
     event: DeviceEvent
     device_id: int
     args: object = None
@@ -40,7 +42,8 @@ class Message(Communication, NamedTuple):
                        d['args'])
 
 
-class Response(Communication, NamedTuple):
+@dataclass(frozen=True)
+class Response(Communication):
     status: bool
     response: object
 
@@ -91,8 +94,16 @@ class TCPEndpoint(IPCEndpoint):
 
         if isinstance(address, str):
             self.sock = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM, 0)
+
+            try:
+                os.unlink(self.address)
+            except OSError:
+                if os.path.exists(self.address):
+                    raise
         else:
             self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM, 0)
+
+        self.sock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 
     @staticmethod
     def _read_message(client_sock: socket.socket) -> Message:

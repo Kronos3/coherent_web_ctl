@@ -1,0 +1,122 @@
+[[2020-11-26 08:56:19 EST]] (info)[1] Opening log file hardware.log
+[[2020-11-26 09:02:25 EST]] (info)[1] Opening log file hardware.log
+[[2020-11-26 09:02:42 EST]] (info)[1] Opening log file hardware.log
+[[2020-11-26 09:03:13 EST]] (info)[1] Opening log file hardware.log
+[[2020-11-26 09:03:21 EST]] (info)[1] Opening log file hardware.log
+[[2020-11-26 09:03:36 EST]] (info)[1] Opening log file hardware.log
+[[2020-11-26 09:04:01 EST]] (info)[1] Opening log file hardware.log
+[[2020-11-26 09:04:01 EST]] (debug)[10] Registering hardware device 'coherent_pwr' as Switch(coherent_pwr): [OFF] (id 0)
+[[2020-11-26 09:04:01 EST]] (debug)[10] Registering hardware device 'hercules_pwr' as Switch(hercules_pwr): [OFF] (id 1)
+[[2020-11-26 09:04:01 EST]] (warn)[1] Attempting to add hardware before the board has been initialized
+[[2020-11-26 09:04:01 EST]] (info)[1] Initializing board to defaults
+[[2020-11-26 09:04:01 EST]] (debug)[10] Setting mode to GPIO.BOARD
+[[2020-11-26 09:04:01 EST]] (info)[1] Adding device to board: Switch(coherent_pwr): [OFF]
+[[2020-11-26 09:04:01 EST]] (info)[1] Adding device to board: Switch(hercules_pwr): [OFF]
+[[2020-11-26 09:04:01 EST]] (info)[1] Initializing board to defaults
+[[2020-11-26 09:04:01 EST]] (debug)[10] Setting mode to GPIO.BOARD
+[[2020-11-26 09:04:09 EST]] (info)[1] Shutting down IPC
+[[2020-11-26 09:04:09 EST]] (debug)[10] Cleaning up devices
+[[2020-11-26 09:04:09 EST]] (debug)[10] Cleaned up Switch(coherent_pwr): [OFF]
+[[2020-11-26 09:04:09 EST]] (debug)[10] Cleaned up Switch(hercules_pwr): [OFF]
+[[2020-11-26 09:05:44 EST]] (info)[0] =============================
+[[2020-11-26 09:05:44 EST]] (info)[1] Opening log file hardware.log
+[[2020-11-26 09:05:44 EST]] (debug)[10] Registering hardware device 'coherent_pwr' as Switch(coherent_pwr): [OFF] (id 0)
+[[2020-11-26 09:05:44 EST]] (debug)[10] Registering hardware device 'hercules_pwr' as Switch(hercules_pwr): [OFF] (id 1)
+[[2020-11-26 09:05:44 EST]] (warn)[1] Attempting to add hardware before the board has been initialized
+[[2020-11-26 09:05:44 EST]] (info)[1] Initializing board to defaults
+[[2020-11-26 09:05:44 EST]] (debug)[10] Setting mode to GPIO.BOARD
+[[2020-11-26 09:05:44 EST]] (info)[1] Adding device to board: Switch(coherent_pwr): [OFF]
+[[2020-11-26 09:05:44 EST]] (info)[1] Adding device to board: Switch(hercules_pwr): [OFF]
+[[2020-11-26 09:05:44 EST]] (info)[1] Initializing board to defaults
+[[2020-11-26 09:05:44 EST]] (debug)[10] Setting mode to GPIO.BOARD
+[[2020-11-26 09:06:40 EST]] (info)[0] =============================
+[[2020-11-26 09:06:40 EST]] (info)[1] Opening log file hardware.log
+[[2020-11-26 09:06:40 EST]] (debug)[10] Registering hardware device 'coherent_pwr' as Switch(coherent_pwr): [OFF] (id 0)
+[[2020-11-26 09:06:40 EST]] (debug)[10] Registering hardware device 'hercules_pwr' as Switch(hercules_pwr): [OFF] (id 1)
+[[2020-11-26 09:06:40 EST]] (warn)[1] Attempting to add hardware before the board has been initialized
+[[2020-11-26 09:06:40 EST]] (info)[1] Initializing board to defaults
+[[2020-11-26 09:06:40 EST]] (debug)[10] Setting mode to GPIO.BOARD
+[[2020-11-26 09:06:40 EST]] (info)[1] Adding device to board: Switch(coherent_pwr): [OFF]
+[[2020-11-26 09:06:40 EST]] (info)[1] Adding device to board: Switch(hercules_pwr): [OFF]
+[[2020-11-26 09:06:40 EST]] (info)[1] Initializing board to defaults
+[[2020-11-26 09:06:40 EST]] (debug)[10] Setting mode to GPIO.BOARD
+[[2020-11-26 09:06:52 EST]] (info)[0] =============================
+[[2020-11-26 09:06:52 EST]] (info)[1] Opening log file hardware.log
+[[2020-11-26 09:06:52 EST]] (debug)[10] Registering hardware device 'coherent_pwr' as Switch(coherent_pwr): [OFF] (id 0)
+[[2020-11-26 09:06:52 EST]] (debug)[10] Registering hardware device 'hercules_pwr' as Switch(hercules_pwr): [OFF] (id 1)
+[[2020-11-26 09:06:52 EST]] (warn)[1] Attempting to add hardware before the board has been initialized
+[[2020-11-26 09:06:52 EST]] (info)[1] Initializing board to defaults
+[[2020-11-26 09:06:52 EST]] (debug)[10] Setting mode to GPIO.BOARD
+[[2020-11-26 09:06:52 EST]] (info)[1] Adding device to board: Switch(coherent_pwr): [OFF]
+[[2020-11-26 09:06:52 EST]] (info)[1] Adding device to board: Switch(hercules_pwr): [OFF]
+[[2020-11-26 09:06:52 EST]] (info)[1] Initializing board to defaults
+[[2020-11-26 09:06:52 EST]] (debug)[10] Setting mode to GPIO.BOARD
+[[2020-11-26 09:07:08 EST]] (info)[1] Shutting down IPC
+[[2020-11-26 09:07:08 EST]] (debug)[10] Cleaning up devices
+[[2020-11-26 09:07:08 EST]] (debug)[10] Cleaned up Switch(coherent_pwr): [OFF]
+[[2020-11-26 09:07:08 EST]] (debug)[10] Cleaned up Switch(hercules_pwr): [OFF]
+[[2020-11-26 09:08:20 EST]] (info)[0] =============================
+[[2020-11-26 09:08:20 EST]] (info)[1] Opening log file hardware.log
+[[2020-11-26 09:08:20 EST]] (debug)[10] Registering hardware device 'coherent_pwr' as Switch(coherent_pwr): [OFF] (id 0)
+[[2020-11-26 09:08:20 EST]] (debug)[10] Registering hardware device 'hercules_pwr' as Switch(hercules_pwr): [OFF] (id 1)
+[[2020-11-26 09:08:20 EST]] (warn)[1] Attempting to add hardware before the board has been initialized
+[[2020-11-26 09:09:02 EST]] (info)[0] =============================
+[[2020-11-26 09:09:02 EST]] (info)[1] Opening log file hardware.log
+[[2020-11-26 09:09:02 EST]] (debug)[10] Registering hardware device 'coherent_pwr' as Switch(coherent_pwr): [OFF] (id 0)
+[[2020-11-26 09:09:02 EST]] (debug)[10] Registering hardware device 'hercules_pwr' as Switch(hercules_pwr): [OFF] (id 1)
+[[2020-11-26 09:09:02 EST]] (warn)[1] Attempting to add hardware before the board has been initialized
+[[2020-11-26 09:09:02 EST]] (debug)[10] Initializing switch coherent_pwr on pin 12
+[[2020-11-26 09:09:02 EST]] (debug)[10] Turning coherent_pwr OFF
+[[2020-11-26 09:09:02 EST]] (info)[1] Adding device to board: Switch(coherent_pwr): [OFF]
+[[2020-11-26 09:09:02 EST]] (warn)[1] Attempting to add hardware before the board has been initialized
+[[2020-11-26 09:09:02 EST]] (debug)[10] Initializing switch hercules_pwr on pin 12
+[[2020-11-26 09:09:02 EST]] (debug)[10] Turning hercules_pwr OFF
+[[2020-11-26 09:09:02 EST]] (info)[1] Adding device to board: Switch(hercules_pwr): [OFF]
+[[2020-11-26 09:09:02 EST]] (info)[1] Initializing board to defaults
+[[2020-11-26 09:09:02 EST]] (debug)[10] Setting mode to GPIO.BOARD
+[[2020-11-26 09:10:03 EST]] (info)[0] =============================
+[[2020-11-26 09:10:03 EST]] (info)[1] Opening log file hardware.log
+[[2020-11-26 09:10:03 EST]] (debug)[10] Registering hardware device 'coherent_pwr' as Switch(coherent_pwr): [OFF] (id 0)
+[[2020-11-26 09:10:03 EST]] (debug)[10] Registering hardware device 'hercules_pwr' as Switch(hercules_pwr): [OFF] (id 1)
+[[2020-11-26 09:10:03 EST]] (warn)[1] Attempting to add hardware before the board has been initialized
+[[2020-11-26 09:10:03 EST]] (debug)[10] Initializing switch coherent_pwr on pin 12
+[[2020-11-26 09:10:03 EST]] (debug)[10] Turning coherent_pwr OFF
+[[2020-11-26 09:10:03 EST]] (info)[1] Adding device to board: Switch(coherent_pwr): [OFF]
+[[2020-11-26 09:10:03 EST]] (warn)[1] Attempting to add hardware before the board has been initialized
+[[2020-11-26 09:10:03 EST]] (debug)[10] Initializing switch hercules_pwr on pin 12
+[[2020-11-26 09:10:03 EST]] (debug)[10] Turning hercules_pwr OFF
+[[2020-11-26 09:10:03 EST]] (info)[1] Adding device to board: Switch(hercules_pwr): [OFF]
+[[2020-11-26 09:10:03 EST]] (info)[1] Initializing board to defaults
+[[2020-11-26 09:10:03 EST]] (debug)[10] Setting mode to GPIO.BOARD
+[[2020-11-26 09:10:27 EST]] (info)[1] Shutting down IPC
+[[2020-11-26 09:10:27 EST]] (debug)[10] Cleaning up devices
+[[2020-11-26 09:10:27 EST]] (debug)[10] Cleaned up Switch(coherent_pwr): [OFF]
+[[2020-11-26 09:10:27 EST]] (debug)[10] Cleaned up Switch(hercules_pwr): [OFF]
+[[2020-11-26 09:10:43 EST]] (info)[0] =============================
+[[2020-11-26 09:10:43 EST]] (info)[1] Opening log file hardware.log
+[[2020-11-26 09:10:43 EST]] (debug)[10] Registering hardware device 'coherent_pwr' as Switch(coherent_pwr): [OFF] (id 0)
+[[2020-11-26 09:10:43 EST]] (debug)[10] Registering hardware device 'hercules_pwr' as Switch(hercules_pwr): [OFF] (id 1)
+[[2020-11-26 09:10:43 EST]] (info)[1] Initializing board to defaults
+[[2020-11-26 09:10:43 EST]] (debug)[10] Setting mode to GPIO.BOARD
+[[2020-11-26 09:10:43 EST]] (info)[1] Adding device to board: Switch(coherent_pwr): [OFF]
+[[2020-11-26 09:10:43 EST]] (info)[1] Adding device to board: Switch(hercules_pwr): [OFF]
+[[2020-11-26 09:11:43 EST]] (info)[1] Shutting down IPC
+[[2020-11-26 09:11:43 EST]] (debug)[10] Cleaning up devices
+[[2020-11-26 09:11:43 EST]] (debug)[10] Cleaned up Switch(coherent_pwr): [OFF]
+[[2020-11-26 09:11:43 EST]] (debug)[10] Cleaned up Switch(hercules_pwr): [OFF]
+[[2020-11-26 09:11:44 EST]] (info)[0] =============================
+[[2020-11-26 09:11:44 EST]] (info)[1] Opening log file hardware.log
+[[2020-11-26 09:11:44 EST]] (debug)[10] Registering hardware device 'coherent_pwr' as Switch(coherent_pwr): [OFF] (id 0)
+[[2020-11-26 09:11:44 EST]] (debug)[10] Registering hardware device 'hercules_pwr' as Switch(hercules_pwr): [OFF] (id 1)
+[[2020-11-26 09:11:44 EST]] (info)[1] Initializing board to defaults
+[[2020-11-26 09:11:44 EST]] (debug)[10] Setting mode to GPIO.BOARD
+[[2020-11-26 09:11:44 EST]] (info)[1] Adding device to board: Switch(coherent_pwr): [OFF]
+[[2020-11-26 09:11:44 EST]] (debug)[10] Initializing switch coherent_pwr on pin 12
+[[2020-11-26 09:11:44 EST]] (debug)[10] Turning coherent_pwr OFF
+[[2020-11-26 09:11:44 EST]] (info)[1] Adding device to board: Switch(hercules_pwr): [OFF]
+[[2020-11-26 09:11:44 EST]] (debug)[10] Initializing switch hercules_pwr on pin 12
+[[2020-11-26 09:11:44 EST]] (debug)[10] Turning hercules_pwr OFF
+[[2020-11-26 09:13:04 EST]] (info)[1] Shutting down IPC
+[[2020-11-26 09:13:04 EST]] (debug)[10] Cleaning up devices
+[[2020-11-26 09:13:04 EST]] (debug)[10] Cleaned up Switch(coherent_pwr): [OFF]
+[[2020-11-26 09:13:04 EST]] (debug)[10] Cleaned up Switch(hercules_pwr): [OFF]

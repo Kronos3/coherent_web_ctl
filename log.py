@@ -1,7 +1,7 @@
 import time
 from typing import TextIO
 
-LOG_FILE = "/var/log/hardware.log"
+LOG_FILE = "hardware.log"
 
 
 class Log:
@@ -12,6 +12,7 @@ class Log:
         self.path = logfile
         self.file = open(self.path, "a+")
 
+        self.info("=============================", log_level=0)
         self.info("Opening log file %s" % self.path)
 
     def get_path(self) -> str:
